@@ -1,0 +1,30 @@
+.analyticsPage {
+    padding: 20px;
+  }
+  
+  .analyticsPage h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+/* src/pages/AnalyticsPage/AnalyticsPage.module.css */
+
+/* ... other styles ... */
+
+/* Style for the Pie Chart's immediate container */
+.pieChartContainer {
+  position: relative; /* Required by Chart.js */
+  height: 400px;      /* Set desired height */
+  width: 90%;         /* Set desired width (e.g., 90% of its parent) */
+  max-width: 550px;   /* Optional: Set a larger max-width if needed */
+  margin: 1rem auto;  /* Center horizontally and add some vertical margin */
+}
+
+.placeholderText {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* ... other styles ... */  
+  /* You might add specific layout styles here if needed */

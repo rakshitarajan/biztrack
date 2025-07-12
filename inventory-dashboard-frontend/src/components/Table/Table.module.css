@@ -1,0 +1,47 @@
+/* src/components/Table/Table.module.css */
+.tableWrapper {
+  overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--border-radius-md, 8px);
+  background-color: var(--color-background-alt, #ffffff);
+  box-shadow: var(--shadow-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Removes gaps between cells */
+  font-size: 0.9rem;
+  color: var(--color-text-medium, #4B5563);
+}
+
+.table th,
+.table td {
+  padding: 0.8rem 1rem; /* Consistent padding */
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light, #e9ecef); /* Lighter border for rows */
+}
+
+.table th {
+  background-color: var(--color-background-body, #f9fafb); /* Light header background */
+  font-weight: 600; /* Bold headers */
+  color: var(--color-text-dark, #374151);
+  text-transform: capitalize; /* Capitalize headers */
+  position: sticky; /* Make headers sticky if table scrolls vertically (requires wrapper height) */
+  top: 0;
+  z-index: 1; /* Ensure header is above scrolling content */
+}
+
+.table tbody tr:hover {
+  background-color: var(--color-primary-light, #f0f9ff); /* Light hover effect - adjust color */
+  /* transition: background-color 0.15s ease-in-out; */
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none; /* Remove bottom border from last row */
+}
+
+/* For right-aligning numeric data (optional) */
+.table td.numberCell,
+.table th.numberCell {
+  text-align: right;
+}

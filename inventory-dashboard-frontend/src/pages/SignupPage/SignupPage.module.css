@@ -1,0 +1,178 @@
+/* src/pages/SignupPage/SignupPage.module.css */
+
+/* 1. Styles for the full page background and centering */
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-background, #f9fafb); /* Use global background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 2. Styles for the centered card containing branding and form */
+.formCard {
+  background-color: var(--color-background-alt, #ffffff);
+  padding: 2.5rem 2rem; /* Padding inside the card */
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06));
+  width: 100%;
+  max-width: 450px; /* Adjust max width as needed for signup */
+  text-align: center;
+  border: 1px solid var(--color-border, #e5e7eb);
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 0.6s 0.2s ease-out forwards;
+}
+
+/* 3. Branding styles (copied from Login update) */
+.branding {
+  margin-bottom: 1.5rem; /* Adjusted space below branding */
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.appName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary, #14B8A6);
+  margin: 0 0 0.25rem 0;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: var(--color-text-medium, #6B7280);
+  margin: 0;
+}
+
+/* 4. Styles for form elements (adapted from your original file) */
+.title { /* Kept your title style */
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark, #2d3748);
+  margin-bottom: 1rem; /* Reduced margin, branding provides space */
+  text-align: center;
+}
+
+.errorMessage { /* Kept your error message style */
+  color: var(--accent-error, #e53e3e);
+  background-color: var(--accent-error-light, #fed7d7);
+  border: 1px solid var(--accent-error-border, #fbb6b6);
+  border-radius: var(--border-radius, 6px);
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.signupForm { /* Kept your form style */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0; /* Removed margin, card padding handles it */
+  text-align: left; /* Align form elements left */
+}
+
+.formGroup { /* Kept your form group style */
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.label { /* Kept your label style */
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--text-medium, #4a5568);
+}
+
+.inputField { /* Kept your input field style */
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color-light, #e2e8f0);
+  border-radius: var(--border-radius, 6px);
+  background-color: var(--background-light, #f7fafc);
+  color: var(--text-dark, #2d3748);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Added focus transition */
+}
+.inputField:focus { /* Kept your focus style */
+  outline: none;
+  border-color: var(--primary-color, #14b8a6);
+  box-shadow: 0 0 0 2px hsla(170, 70%, 45%, 0.2); /* Adjusted focus ring */
+}
+
+.selectField { /* Kept your select style */
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23A0AEC0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.65em auto;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+/* Apply inputField styles also to select for consistency */
+.selectField {
+    composes: inputField; /* Inherit styles from inputField */
+}
+
+
+.signupButton { /* Kept your button style */
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem; /* Reduced top margin */
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--button-primary-bg, #14b8a6);
+  border: none;
+  border-radius: var(--border-radius, 6px);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Added transform */
+}
+.signupButton:hover:not(:disabled) { /* Kept hover */
+  background-color: var(--button-primary-hover-bg, #0f766e);
+}
+.signupButton:active:not(:disabled) { /* Added active state */
+  transform: scale(0.98);
+}
+.signupButton:disabled { /* Kept disabled */
+  background-color: var(--button-disabled-bg, #94a3b8);
+  cursor: not-allowed;
+}
+
+/* 5. Style for the switch link (Copied from Login update) */
+.switchForm { /* Renamed from loginLinkContainer */
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-medium, #4a5568);
+}
+
+.switchForm a { /* Renamed from loginLink */
+    color: var(--primary-color, #14b8a6);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 0.3rem;
+}
+.switchForm a:hover {
+    text-decoration: underline;
+    color: var(--primary-color-dark, #0f766e);
+}
+
+/* Animation keyframes (Copied from Login update) */
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* REMOVED the :root variables block - define these globally in index.css */

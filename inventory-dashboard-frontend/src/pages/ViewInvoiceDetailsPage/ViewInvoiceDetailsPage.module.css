@@ -1,0 +1,137 @@
+/* Basic container styling */
+.detailsPage {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Adjust as needed */
+    margin: 20px auto; /* Center the container */
+  }
+  
+  .detailsPage h2 {
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  /* Loading and Error messages */
+  .loadingText,
+  .errorText {
+    text-align: center;
+    font-style: italic;
+    margin: 30px 0;
+  }
+  
+  .errorText {
+    color: #d9534f; /* Bootstrap danger color */
+  }
+  
+  /* Invoice Header Section (Customer, Date, etc.) */
+  .invoiceHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .customerInfo,
+  .invoiceMeta {
+    flex-basis: 48%; /* Approximately half width */
+    margin-bottom: 10px; /* Spacing when wrapped */
+  }
+  
+  .customerInfo h3,
+  .invoiceMeta h3 {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 8px;
+  }
+  
+  .customerInfo p,
+  .invoiceMeta p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #444;
+  }
+  
+  .customerInfo strong,
+  .invoiceMeta strong {
+      font-weight: 600;
+      margin-right: 5px;
+      color: #333;
+  }
+  
+  
+  /* Items Table Section */
+  .itemsSection {
+    margin-top: 20px;
+  }
+  
+  .itemsSection h3 {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #eee;
+  }
+  
+  .itemsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .itemsTable th,
+  .itemsTable td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 0.9em;
+  }
+  
+  .itemsTable th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .itemsTable td.numberCell {
+      text-align: right;
+  }
+  
+  /* Total Amount Section */
+  .totalSection {
+    margin-top: 25px;
+    text-align: right;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .totalAmount {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #28a745; /* Bootstrap success color */
+  }
+  
+  /* Back Button */
+  .backButton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #6c757d; /* Bootstrap secondary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* If using Link component */
+    transition: background-color 0.2s ease;
+    font-size: 0.95em;
+  }
+  
+  .backButton:hover {
+    background-color: #5a6268;
+  }

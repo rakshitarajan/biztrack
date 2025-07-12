@@ -1,0 +1,81 @@
+/* src/components/Navbar/Navbar.module.css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Push content to the RIGHT */
+  padding: 0 25px; /* Right padding */
+
+  height: 55px; /* Match sidebar header height */
+  position: fixed;
+  top: 0;
+
+  /* --- Default state (Sidebar EXPANDED) --- */
+  left: 240px; /* Match sidebar width */
+  width: calc(100% - 240px);
+  
+  z-index: 950; /* Below sidebar z-index */
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* --- Style when Sidebar is Collapsed --- */
+.navbarCollapsed {
+   left: 70px; /* Match collapsed sidebar width */
+   width: calc(100% - 70px);
+}
+
+/* --- Profile Icon Link --- */
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+  margin-left: auto; /* Helps ensure it stays right with flex-end */
+}
+
+.iconLink:hover {
+  background-color: #f0f0f0;
+  color: #111827;
+}
+
+.iconLink.activeIconLink {
+  background-color: #e0f2f1;
+  color: var(--color-primary, #14B8A6);
+}
+
+.profileIcon {
+  font-size: 2.0rem;
+  display: block;
+}
+
+/* --- Login/Signup Links --- */
+.authLinks {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto; /* Helps ensure it stays right with flex-end */
+}
+.navLink {
+    color: var(--color-text-medium, #4a5568);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.navLink:hover {
+    color: var(--color-primary, #14B8A6);
+    background-color: #f3f4f6;
+}

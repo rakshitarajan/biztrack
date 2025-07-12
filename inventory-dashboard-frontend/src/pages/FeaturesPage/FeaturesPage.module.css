@@ -1,0 +1,425 @@
+/* FeaturesPage.module.css */
+
+/* --- Base Page Styling --- */
+.pageContainer {
+    min-height: 100vh;
+    background-color: #000000;
+    /* BLACK background */
+    color: #E5E7EB;
+    /* Light primary text */
+    font-family: var(--font-family-sans);
+    /* Use variable from index.css */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    width: 100%;
+    padding: 1rem 2rem;
+    /* Adjust padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Darker semi-transparent black */
+    backdrop-filter: blur(10px);
+    /* Glassy blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle border */
+}
+
+.navContent {
+    max-width: 1280px;
+    /* Container max width */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoLink {
+    font-size: 1.75rem;
+    /* Adjust size */
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    /* Text Gradient applied via inline style */
+}
+
+.navActions {
+    display: flex;
+    /* Added for spacing */
+    align-items: center;
+    gap: 0.75rem;
+    /* Space between buttons */
+}
+
+.navActions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    /* Ensure no default border */
+    border-radius: 0.5rem;
+    /* Slightly more rounded */
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.loginButton {
+    color: #E5E7EB;
+    /* text-main */
+    background-color: rgba(55, 65, 81, 0.7);
+    /* gray-700 semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle border */
+}
+
+.loginButton:hover {
+    background-color: rgba(75, 85, 99, 0.8);
+    /* gray-600 semi-transparent */
+}
+
+.signupButton {
+    color: white;
+    background-color: #A78BFA;
+    /* Primary Accent Purple */
+    box-shadow: 0 4px 6px -1px rgba(167, 139, 250, 0.2), 0 2px 4px -2px rgba(167, 139, 250, 0.2);
+    /* Subtle shadow */
+}
+
+.signupButton:hover {
+    background-color: #8B5CF6;
+    /* Darker Purple */
+}
+
+/* --- Hero Section --- */
+.heroSection {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* Vertically center the columns container */
+    padding: 8rem 2rem 4rem 2rem;
+    /* Adjust vertical padding */
+    background: linear-gradient(145deg, #0a0a0a 0%, #18181b 100%);
+    /* Very dark gradient */
+    position: relative;
+    overflow: hidden;
+}
+
+.heroColumnsContainer {
+    display: flex;
+    flex-direction: row;
+    /* Default, ensure side-by-side */
+    align-items: center;
+    justify-content: space-around;
+    /* Distribute space */
+    width: 100%;
+    max-width: 1200px;
+    /* Limit width */
+    margin: 0 auto;
+    gap: 3rem;
+    /* Space between image and text */
+}
+
+/* --- Left Column styles --- */
+.leftColumn {
+    flex-basis: 40%;
+    /* Takes ~40% width */
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Right Column styles --- */
+.rightColumn {
+    flex-basis: 55%;
+    /* Takes ~55% width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align text etc. to the start (left) */
+    text-align: left;
+    z-index: 10;
+    /* Apply fade-in to the whole column */
+    animation: fadeInAnimation 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+.imageCarousel {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* Keep container square-ish */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carouselImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Fade and slight scale/rotate animation */
+    animation: imageFadeIn 1.2s ease-in-out forwards;
+    opacity: 0;
+    /* Start hidden for animation */
+}
+
+@keyframes imageFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.heroHeadline {
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    line-height: 1.1;
+    /* Gradient applied inline */
+}
+
+.heroSubheadline {
+    font-size: clamp(1.1rem, 4vw, 1.25rem);
+    color: #9CA3AF;
+    /* text-secondary */
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+    margin-left: 0;
+    /* Ensure left align */
+    margin-right: 0;
+    line-height: 1.6;
+    text-align: left;
+    /* Fade in animation */
+    animation: fadeInAnimation 1.5s 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.heroSubheadline strong {
+    font-weight: 600;
+    /* Gradient applied inline */
+}
+
+.heroCtaButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #8B5CF6, #A78BFA);
+    color: white;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border: none;
+    /* Ensure no default border */
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(167, 139, 250, 0.3), 0 4px 6px -4px rgba(167, 139, 250, 0.3);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+    /* Animation */
+    animation: fadeInAnimation 1.5s 1s ease-out forwards;
+    opacity: 0;
+}
+
+.heroCtaButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px -5px rgba(167, 139, 250, 0.4), 0 8px 10px -6px rgba(167, 139, 250, 0.4);
+    filter: brightness(1.1);
+}
+
+.heroCtaButton svg,
+.ctaIcon {
+    /* Added .ctaIcon class */
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-left: 0.6rem;
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.scrollIndicator svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #6B7280;
+    /* Gray-500 */
+    animation: bounceAnimation 2s infinite;
+}
+
+/* --- Features Section --- */
+.featuresSection {
+    width: 100%;
+    padding: 5rem 1rem;
+    /* More vertical padding */
+    background-color: #111111;
+    /* Very dark background */
+}
+
+.featuresContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.featuresTitle {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #E5E7EB;
+    /* text-main */
+}
+
+.featuresSubtitle {
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    color: #9CA3AF;
+    /* text-secondary */
+    text-align: center;
+    margin-bottom: 4rem;
+    /* More space */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    /* Slightly larger gap */
+}
+
+.featureCard {
+    background-color: rgba(31, 41, 55, 0.5);
+    /* gray-800 semi-transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    padding: 1.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Darker shadow */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* glass-border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.featureCard:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: rgba(167, 139, 250, 0.3);
+    /* primary-accent */
+}
+
+.featureIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(to bottom right, #8B5CF6, #A78BFA);
+    /* primary-accent gradient */
+    border-radius: 0.5rem;
+    color: white;
+    box-shadow: 0 4px 8px rgba(167, 139, 250, 0.2);
+}
+
+.featureIconSvg {
+    /* Class for icon svg */
+    width: 1.75rem;
+    height: 1.75rem;
+    color: white;
+    /* Ensure icon color is white */
+}
+
+.fallbackIcon {
+    /* Style placeholder icon */
+    font-size: 1.75rem;
+}
+
+.featureCard h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #E5E7EB;
+    /* text-main */
+    /* Gradient applied inline */
+}
+
+.featureCard p {
+    color: #9CA3AF;
+    /* text-secondary */
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* --- Footer Section --- */
+.footer {
+    width: 100%;
+    padding: 2.5rem 1rem;
+    background-color: #000000;
+    /* Black */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* glass-border */
+    text-align: center;
+    color: #6B7280;
+    /* Gray-500 */
+    font-size: 0.875rem;
+}
+
+.footer p {
+    margin-bottom: 0.25rem;
+}
+
+/* --- Animations --- */
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in;
+    }
+}

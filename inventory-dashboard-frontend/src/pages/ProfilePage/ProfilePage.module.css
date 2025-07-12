@@ -1,0 +1,95 @@
+/* src/pages/ProfilePage/ProfilePage.module.css */
+
+.profilePage {
+    padding: 20px;
+  }
+  
+  .profilePage h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .profileCard {
+    /* Uses styles from Card component + overrides */
+    padding: 25px 30px;
+    max-width: 700px; /* Limit width */
+    margin: 0 auto; /* Center card */
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    position: relative; /* For positioning edit button */
+  }
+  
+  .avatarPlaceholder {
+    font-size: 3.5rem; /* Example size */
+    background-color: #e0e0e0;
+    color: #888;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5rem;
+  }
+  
+  .userInfo p {
+    margin: 0 0 0.3rem 0;
+    color: #555;
+  }
+  
+  .userEmail {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #222;
+  }
+  .userRole {
+      font-size: 0.9rem;
+      text-transform: capitalize;
+      color: #777;
+  }
+  
+  .editButton {
+      position: absolute;
+      top: 0px; /* Adjust positioning as needed */
+      right: 0px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .infoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 1.5rem; /* Space between grid items */
+  }
+  
+  /* Style read-only inputs differently */
+  input:read-only,
+  input:disabled {
+    background-color: #f8f9fa; /* Lighter background */
+    cursor: not-allowed;
+    border-color: #e9ecef;
+  }
+  
+  .editActions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+  }
+  
+  /* Add styles for Button, Spinner, Alert if not globally available */

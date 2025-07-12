@@ -1,0 +1,85 @@
+/* src/components/Button/Button.module.css */
+.button {
+  display: inline-flex; /* For aligning icon and text */
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem; /* Default padding */
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--border-radius, 6px);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline if used as Link */
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Variants --- */
+.primary {
+  background-color: var(--color-primary, #14B8A6);
+  color: var(--color-text-on-primary, #ffffff);
+  border-color: var(--color-primary, #14B8A6);
+}
+.primary:hover:not(:disabled) {
+  background-color: var(--color-primary-dark, #0F766E);
+  border-color: var(--color-primary-dark, #0F766E);
+}
+.primary:focus-visible {
+  box-shadow: 0 0 0 3px hsla(170, 70%, 45%, 0.3);
+}
+
+.secondary {
+  background-color: var(--color-secondary, #64748B);
+  color: var(--color-text-on-primary, #ffffff);
+  border-color: var(--color-secondary, #64748B);
+}
+.secondary:hover:not(:disabled) {
+  background-color: var(--color-secondary-dark, #475569);
+  border-color: var(--color-secondary-dark, #475569);
+}
+.secondary:focus-visible {
+  box-shadow: 0 0 0 3px hsla(215, 19%, 50%, 0.3);
+}
+
+
+.danger {
+  background-color: var(--color-danger, #EF4444);
+  color: var(--color-text-on-danger, #ffffff);
+  border-color: var(--color-danger, #EF4444);
+}
+.danger:hover:not(:disabled) {
+  background-color: var(--color-danger-dark, #B91C1C);
+  border-color: var(--color-danger-dark, #B91C1C);
+}
+.danger:focus-visible {
+  box-shadow: 0 0 0 3px hsla(0, 84%, 60%, 0.3);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--color-primary, #14B8A6);
+  border-color: var(--color-primary, #14B8A6);
+}
+.outline:hover:not(:disabled) {
+  background-color: var(--color-primary-light, #A7F3D0);
+  color: var(--color-primary-dark, #0F766E);
+}
+.outline:focus-visible {
+  box-shadow: 0 0 0 3px hsla(170, 70%, 45%, 0.2);
+}
+
+/* --- Sizes --- */
+.small {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.large {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+}

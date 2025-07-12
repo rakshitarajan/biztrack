@@ -1,0 +1,160 @@
+/* Styles for the Add Product Page and Form */
+
+.pageContainer {
+  padding: 1rem 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text-dark, #374151);
+  margin: 0;
+}
+
+.iconPlaceholder {
+    font-size: 1.4rem;
+    color: var(--color-primary, #14B8A6);
+}
+
+.titleIcon {
+   font-size: 1.5rem;
+   color: var(--color-primary, #14B8A6);
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* Container for the form */
+.formContainer {
+  background-color: var(--color-background-alt, #ffffff);
+  padding: 2rem;
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--shadow-md); /* Use variable */
+  border: 1px solid var(--color-border, #e5e7eb);
+}
+
+/* Form specific styles */
+.addProductForm {
+  width: 100%;
+}
+
+/* Grid layout for form fields */
+.formGrid {
+  display: grid;
+  /* --- Force 2 columns consistently --- */
+  grid-template-columns: 1fr 1fr;
+  /* ------------------------------------ */
+  gap: 1.5rem; /* Space between grid items (rows and columns) */
+  margin-bottom: 1.5rem; /* Space below grid before submit button */
+}
+
+/* Style for form groups (used for label + select) */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem; /* Space between label and input/select */
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text-medium, #4a5568);
+}
+
+/* Base input/select styling */
+.inputField,
+.selectField {
+  width: 100%;
+  padding: 0.75rem 1rem; /* Slightly reduced padding */
+  font-size: 0.95rem; /* Slightly reduced font size */
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--border-radius, 6px);
+  background-color: var(--background-light, #f7fafc);
+  color: var(--text-dark, #2d3748);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inputField:focus,
+.selectField:focus {
+  outline: none;
+  border-color: var(--primary-color, #14b8a6);
+  box-shadow: 0 0 0 2px hsla(170, 70%, 45%, 0.2);
+}
+
+/* Select specific styles */
+.selectField {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23A0AEC0%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); /* Grey arrow */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.65em auto;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+.selectField:disabled {
+    background-color: #e9ecef; /* Slightly greyed out when disabled */
+    cursor: not-allowed;
+}
+
+/* Container for the submit button */
+.submitButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+/* Alert / Spinner styles remain the same */
+.errorMessage, .successMessage {
+  padding: 10px;
+  margin: 1rem 0;
+  border-radius: 4px;
+  text-align: center;
+  grid-column: 1 / -1; /* Make alert span full width of grid if inside */
+}
+.errorMessage { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.successMessage { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+/* Add these to AddProductPage.module.css */
+
+/* ... existing styles ... */
+
+.detailedErrorsContainer {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--accent-error);
+    background-color: rgba(239, 68, 68, 0.05); /* Light error background */
+    border-radius: var(--border-radius);
+}
+.detailedErrorsContainer h4 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    color: var(--accent-error);
+    font-weight: 600;
+}
+.errorList {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-dark); /* Or a darker error color */
+}
+.errorList li {
+    margin-bottom: 0.3rem;
+}

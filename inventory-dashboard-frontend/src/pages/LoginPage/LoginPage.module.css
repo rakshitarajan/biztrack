@@ -1,0 +1,108 @@
+/* Full page container to center the card */
+.pageContainer {
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  min-height: 100vh; /* Full viewport height */
+  background-color: var(--color-background, #f9fafb); /* Use global background */
+  /* Optional: Add a subtle gradient or pattern */
+  /* background-image: linear-gradient(to bottom right, hsl(170, 50%, 96%), hsl(210, 40%, 97%)); */
+  padding: 20px; /* Ensure some padding on small screens */
+  box-sizing: border-box;
+}
+
+/* The card holding the form and branding */
+.formCard {
+  background-color: var(--color-background-alt, #ffffff);
+  padding: 2.5rem 2rem; /* Generous padding */
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06));
+  width: 100%;
+  max-width: 400px; /* Max width for the card */
+  text-align: center;
+  border: 1px solid var(--color-border, #e5e7eb);
+  /* --- Animation --- */
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly lower */
+  animation: fadeInSlideUp 0.6s 0.2s ease-out forwards; /* name duration delay timing fill-mode */
+}
+
+/* Branding section */
+.branding {
+  margin-bottom: 2rem; /* Space below branding */
+}
+
+.logo {
+  max-width: 150px; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.appName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary, #14B8A6); /* Use primary color */
+  margin: 0 0 0.25rem 0; /* Adjust margin */
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: var(--color-text-medium, #6B7280);
+  margin: 0;
+}
+
+/* Link to switch between Login/Signup */
+.switchForm {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-medium);
+}
+
+.switchForm a {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.switchForm a:hover {
+  text-decoration: underline;
+}
+
+
+/* Keyframes for the animation */
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Styles below this might be in LoginForm.module.css --- */
+/* Ensure form elements have appropriate margins if needed */
+
+/* Example: Add top margin to form if needed */
+/* Assumes form has a class in LoginForm.module.css */
+/* .loginForm { margin-top: 1rem; } */
+
+/* Example: Input field focus animation */
+/* Assumes input has a class in LoginForm.module.css */
+/* .inputField {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.inputField:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px hsla(170, 70%, 45%, 0.3); /* Teal focus ring */
+/* outline: none; */
+/* } */
+
+/* Example: Button hover animation */
+/* Assumes button has a class in LoginForm.module.css */
+/* .loginButton {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.loginButton:hover {
+  background-color: var(--color-primary-dark); /* Darker primary */
+/* } */
+/* .loginButton:active {
+  transform: scale(0.98); /* Slight shrink on click */
+/* } */

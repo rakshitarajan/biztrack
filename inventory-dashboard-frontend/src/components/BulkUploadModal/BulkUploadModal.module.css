@@ -1,0 +1,276 @@
+/* src/components/BulkUploadModal/BulkUploadModal.module.css */
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 300px;
+    /* Ensure modal has some height */
+}
+
+.fileInputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.fileInputLabel {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--border-color-medium);
+    border-radius: var(--border-radius);
+    background-color: var(--background-light);
+    color: var(--text-medium);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    /* Or block if full width */
+}
+
+.fileInputLabel:hover {
+    background-color: var(--border-color-light);
+}
+
+.fileInputHidden {
+    display: none;
+}
+
+.fileHint {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+}
+
+
+.previewSection {
+    margin-top: 1rem;
+}
+
+.previewSection h4 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.tableContainer {
+    max-height: 300px;
+    /* Limit table height and make scrollable */
+    overflow-y: auto;
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius-sm);
+}
+
+.previewTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.previewTable th,
+.previewTable td {
+    border: 1px solid var(--border-color-light);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    white-space: nowrap;
+    /* Prevent wrapping, use with overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    /* Prevent very wide columns */
+}
+
+.previewTable th {
+    background-color: var(--background-light);
+    font-weight: 600;
+    position: sticky;
+    /* Sticky headers */
+    top: 0;
+    z-index: 1;
+}
+
+.togglePreviewButton {
+    margin-top: 0.75rem;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    /* Space above actions */
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color-light);
+}
+
+/* src/components/BulkUploadModal/BulkUploadModal.module.css */
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 300px;
+}
+
+.fileInputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+/* Style the label to look like a button */
+.fileInputLabelButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    /* Standard button padding */
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    /* Use primary color for text */
+    background-color: var(--background-white);
+    /* White background */
+    border: 1px solid var(--primary-color);
+    /* Primary color border */
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-align: center;
+}
+
+.fileInputLabelButton:hover {
+    background-color: rgba(20, 184, 166, 0.05);
+    /* Light primary tint */
+    /* color: var(--primary-color-dark); */
+}
+
+.fileInputHidden {
+    display: none;
+}
+
+.fileHint {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+}
+
+
+.previewSection {
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color-light);
+    padding-top: 1rem;
+}
+
+.previewSection h4 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tableContainer {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius-sm);
+}
+
+.previewTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.previewTable th,
+.previewTable td {
+    border: 1px solid var(--border-color-light);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.previewTable th {
+    background-color: var(--background-light);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.togglePreviewButton {
+    margin-top: 0.75rem;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: auto;
+    /* Push actions to bottom if content is short */
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color-light);
+}
+
+/* Add for search error message if used, though not currently in this modal's JS */
+.searchErrorMessage {
+    color: var(--accent-error);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* src/components/BulkUploadModal/BulkUploadModal.module.css */
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 200px;
+    /* Can be smaller without preview */
+}
+
+.fileInputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.fileInputLabelButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    background-color: var(--background-white);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-align: center;
+}
+
+.fileInputLabelButton:hover {
+    background-color: rgba(20, 184, 166, 0.05);
+}
+
+.fileInputHidden {
+    display: none;
+}
+
+.fileHint {
+    font-size: 0.8rem;
+    color: var(--text-medium);
+}
+
+/* Preview section styles can be removed or kept if you plan to add it back later */
+/* .previewSection { ... } */
+/* .tableContainer { ... } */
+/* .previewTable { ... } */
+/* .previewTable th, .previewTable td { ... } */
+/* .previewTable th { ... } */
+/* .togglePreviewButton { ... } */
+
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color-light);
+}

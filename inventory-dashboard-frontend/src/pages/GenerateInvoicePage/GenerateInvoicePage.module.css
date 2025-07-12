@@ -1,0 +1,132 @@
+.generateInvoicePage {
+    padding: 20px;
+  }
+  
+  .generateInvoicePage h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .generateInvoiceForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 700px; /* Adjust as needed */
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .productSelector {
+    margin-top: 10px;
+  }
+  
+  .selectedProducts {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .selectedProducts h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .selectedProducts ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .selectedProducts li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .selectedProducts li:last-child {
+    border-bottom: none;
+  }
+  
+  .quantityInput {
+    width: 60px;
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .selectedProducts button {
+    background-color: #dc3545; /* Example remove button color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .selectedProducts button:hover {
+    background-color: #c82333;
+  }
+  
+  .totalAmount {
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+    font-size: 1.2rem;
+  }
+  
+  button {
+    background-color: #00c853; /* Example generate button color */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #00a543;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .success {
+    color: green;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,115 @@
+/* src/pages/StockPredictionPage/StockPredictionPage.module.css */
+
+.stockPredictionPage {
+    padding: 20px;
+  }
+  
+  .stockPredictionPage h2 {
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .filtersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .filterGroup, .searchFilterGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filterGroup label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .categorySelect {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 180px;
+  }
+  
+  .searchFilterGroup {
+    flex-grow: 1;
+  }
+  
+  .resultsSection {
+      margin-top: 1.5rem;
+  }
+  
+  .resultsSection h3 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: #444;
+  }
+  
+  .predictionResultArea {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      padding: 15px 20px;
+      border: 1px solid #d1e7dd; /* Light green border */
+      border-radius: 6px;
+      background-color: #f0fff4; /* Very light green background */
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #0f5132; /* Darker green text */
+  }
+  
+  .predictionMessage {
+      font-style: normal;
+      font-weight: 500;
+  }
+  
+  .predictionMessage strong {
+      /* Highlight prediction date/days */
+      color: #0f5132; /* Use a suitable color */
+      font-weight: bold;
+  }
+  
+  .predictionError {
+      color: #842029; /* Dark red */
+      background-color: #f8d7da; /* Light red */
+      border-color: #f5c2c7;
+      font-style: normal;
+      font-weight: normal;
+  }
+  
+  /* Styles for the table actions */
+  .actionButtonsContainer {
+    display: flex;
+    justify-content: center; /* Center button in cell */
+  }
+  
+  /* No results message */
+  .noResults {
+      margin-top: 1rem;
+      text-align: center;
+      color: #666;
+      font-style: italic;
+  }
+  
+  /* Stock level styling */
+  .lowStock {
+      color: orange;
+      font-weight: bold;
+  }
+  .outOfStock {
+      color: red;
+      font-weight: bold;
+      text-decoration: line-through;
+  }

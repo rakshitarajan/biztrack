@@ -1,0 +1,41 @@
+/*.authLayout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; 
+  }
+  
+  .authContainer {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+  } */
+
+  /* frontend/src/layouts/AuthLayout/AuthLayout.module.css */
+
+.authLayout {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  min-height: 100vh;      /* Full viewport height */
+  background-color: #f4f7f6; /* Light grey-blue background */
+  padding: 20px;          /* Add padding for smaller screens */
+  box-sizing: border-box;
+}
+
+.authContainer {
+  background-color: #fff;
+  padding: 30px 40px; /* Adjust padding as needed */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+
+  /* --- ADJUSTED WIDTH --- */
+  width: 100%;          /* Take available width */
+  max-width: 500px;     /* <<< SET MAX WIDTH for the widest form (e.g., Signup) */
+  /* ---------------------- */
+
+  box-sizing: border-box; /* Include padding in width calculation */
+}

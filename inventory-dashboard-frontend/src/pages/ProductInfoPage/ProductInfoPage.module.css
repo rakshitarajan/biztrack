@@ -1,0 +1,129 @@
+/* src/pages/ProductInfoPage/ProductInfoPage.module.css */
+.productInfoPage {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .headerActions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .productContent {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .productContent {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .infoCard {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .infoCard h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .infoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .infoItem {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+  
+  .value {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  
+  .description {
+    white-space: pre-line;
+    line-height: 1.6;
+  }
+  
+  .outOfStock, .lowStock {
+    font-weight: bold;
+  }
+  
+  .outOfStock {
+    color: #e53935;
+  }
+  
+  .lowStock {
+    color: #ff9800;
+  }
+  
+  .statusIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .outOfStockIndicator {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .lowStockIndicator {
+    background-color: #fff3e0;
+    color: #e65100;
+    border: 1px solid #ffcc80;
+  }
+  
+  .inStockIndicator {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+  }
+  
+  .adminActions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }

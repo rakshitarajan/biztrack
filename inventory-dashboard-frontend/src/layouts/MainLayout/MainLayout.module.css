@@ -1,0 +1,45 @@
+/* src/layouts/MainLayout/MainLayout.module.css */
+
+/* Outermost container */
+.appLayoutContainer {
+  display: flex;
+  flex-direction: column; /* Stack Navbar on top of main body */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevent unexpected body scrollbars */
+}
+
+/* Container for Sidebar + Content, sits below Navbar */
+.mainBodyContainer {
+  display: flex; /* Arrange Sidebar and Content side-by-side */
+  flex-grow: 1; /* Takes up remaining vertical space below Navbar */
+  position: relative; /* Needed for sidebar positioning */
+  /* We need padding-top here to account for the FIXED Navbar */
+  padding-top: 55px; /* Match exact height of navbar/sidebar header */
+  height: 100vh; /* Ensure it tries to take full height */
+  box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* Main Content Area */
+.contentArea {
+  flex-grow: 1;
+  padding: 20px; /* Content padding all around */
+  /* Left padding accounts for EXPANDED sidebar width */
+  padding-left: 260px; /* 240px Sidebar width + 20px spacing */
+  overflow-y: auto; /* Allow content area to scroll */
+  box-sizing: border-box;
+  background-color: var(--color-background, #F9FAFB);
+  /* Optional background gradient */
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(170, 50%, 94%),
+    hsl(210, 40%, 96%)
+  );
+  height: calc(100vh - 55px); /* Full viewport minus navbar height */
+  transition: padding-left 0.3s ease-in-out; /* Animate padding change */
+}
+
+/* Adjust content padding when sidebar is collapsed */
+.contentAreaCollapsed {
+  padding-left: 90px; /* 70px collapsed Sidebar width + 20px spacing */
+}

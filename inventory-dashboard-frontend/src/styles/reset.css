@@ -1,0 +1,31 @@
+/* Resetting basic elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, fieldset, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* Setting box-sizing to border-box globally */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Removing list styles */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Removing default button styles */
+  button {
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+  }
+  
+  /* Add more reset rules as needed */

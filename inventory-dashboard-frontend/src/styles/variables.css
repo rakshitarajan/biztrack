@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #28a745;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --border-color: #ddd;
+    --font-family-base: sans-serif;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --border-radius: 4px;
+    /* Add more variables as needed */
+  }

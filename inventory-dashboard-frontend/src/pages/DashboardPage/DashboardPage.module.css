@@ -1,0 +1,93 @@
+/* Layout container for the entire dashboard page content */
+.dashboardContainer {
+  padding: 1rem 1.5rem;
+}
+
+/* Styling for the welcome message area */
+.welcomeSection {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.welcomeTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-dark); /* Use variable */
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.welcomeSubtitle {
+  font-size: 1rem;
+  color: var(--color-text-medium); /* Use variable */
+  margin-top: 0;
+}
+
+/* Styling for distinct sections like Analytics, Alerts */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary); /* Use variable */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border); /* Use variable */
+  display: inline-block;
+}
+
+/* Grid container for laying out StatCards and InfoListCards */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Styling for Alerts section grid */
+.alertsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+/* Styling for individual alert boxes */
+.alertItem {
+  background-color: var(--color-accent-warning-bg); /* Use variable */
+  color: var(--color-accent-warning-text); /* Use variable */
+  border: 1px solid var(--color-accent-warning-border); /* Use variable */
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Style for placeholder text (Charts, empty Alerts) */
+.placeholderText {
+  font-size: 0.9rem;
+  color: var(--color-text-medium); /* Use variable */
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-background-alt); /* Use card background or slightly different bg */
+  border: 1px dashed var(--color-border); /* Dashed border */
+  border-radius: var(--border-radius-sm);
+}
+
+/* Container for loading/error messages */
+.messageContainer {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-medium); /* Use variable */
+}
+
+.error {
+color: #dc3545; /* Keep standard error color */
+font-weight: bold;
+}
+
+/* Styles for components like StatCard/InfoListCard should be in their own files */
